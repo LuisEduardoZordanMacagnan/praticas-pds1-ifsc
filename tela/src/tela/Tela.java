@@ -13,10 +13,13 @@ import javax.swing.JOptionPane;
 
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import javax.swing.JScrollBar;
+import javax.swing.JScrollPane;
 
 public class Tela extends JFrame {
 
 	private JPanel contentPane;
+	private JTextPane tpTexto;
 
 	/**
 	 * Launch the application.
@@ -32,10 +35,6 @@ public class Tela extends JFrame {
 				}
 			}
 		});
-	}
-
-	public static void inserir(JTextPane jpTexto, JComboBox<String> cbOpcoes) {
-		jpTexto.setText(jpTexto.getText()+cbOpcoes.getSelectedItem()+", ");
 	}
 	
 	/**
@@ -58,23 +57,25 @@ public class Tela extends JFrame {
 		}
 		contentPane.add(cbOpcoes);
 		
-		
-		JTextPane tpTexto = new JTextPane();
-		tpTexto.setBounds(10, 84, 414, 167);
-		contentPane.add(tpTexto);
-		
 		JLabel lblNewLabel = new JLabel("Opções:");
 		lblNewLabel.setBounds(26, 44, 63, 14);
 		contentPane.add(lblNewLabel);
 		
+		JScrollPane scrollPane = new JScrollPane();
+		scrollPane.setBounds(10, 84, 414, 167);
+		contentPane.add(scrollPane);
+		
+		
+		JTextPane tpTexto = new JTextPane();
+		scrollPane.setViewportView(tpTexto);
+		
 		JButton btnAdicionar = new JButton("ADICIONAR:");
 		btnAdicionar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				inserir(tpTexto, cbOpcoes);
+				tpTexto.setText(tpTexto.getText()+cbOpcoes.getSelectedItem()+", ");
 			}
 		});
 		btnAdicionar.setBounds(297, 40, 100, 23);
 		contentPane.add(btnAdicionar);
-		
 	}
 }
