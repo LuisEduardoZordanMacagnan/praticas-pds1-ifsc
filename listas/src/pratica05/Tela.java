@@ -1,4 +1,4 @@
-package tela;
+package pratica05;
 
 import java.awt.EventQueue;
 
@@ -15,7 +15,10 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.JScrollBar;
 import javax.swing.JScrollPane;
-
+/**
+ * @author LuísEduardo
+ * @data 17/10/2022
+ */
 public class Tela extends JFrame {
 
 	private JPanel contentPane;

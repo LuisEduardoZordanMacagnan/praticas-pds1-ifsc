@@ -1,15 +1,15 @@
-package ifsc;
+package pratica03;
 
 import javax.swing.JOptionPane;
 
 /**
  * 
  * @author LuísEduardoZordanMacagnan
- * @date 30/09/2022
+ * @date 17/10/2022
  * @version 1.0
  *
  */
-public class MainGit {
+public class RetornaVetor {
 
 	public static void main(String[] args) {
 		Double[] vetor = new Double[5];

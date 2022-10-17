@@ -1,4 +1,4 @@
-package ifsc;
+package pratica04;
 
 import java.awt.EventQueue;
 
@@ -11,7 +11,10 @@ import javax.swing.JOptionPane;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
-
+/**
+ * @author LuísEduardo
+ * @data 17/10/2022
+ */
 public class Janela extends JFrame {
 
 	private JPanel contentPane;
